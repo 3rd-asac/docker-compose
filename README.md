@@ -33,7 +33,7 @@ Lombok 을 통해 자동생성되어야할 Getter 가 자바 재컴파일로 인
 
 재컴파일을 하기 위해서는 아래 강제 옵션을 사용해야한다.
 
-`docker-compose up -d --force-recreate --no-deps --build postgres`
+`docker-compose up -d --force-recreate --no-deps --build docker_tutorial`
 
 옵션 설명
 
