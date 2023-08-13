@@ -1,5 +1,14 @@
 ## Docker Compose Tutorial
 
+### How to test, 구동
+
+`docker-compose up` 명령어 실행 후 아래 API 동작 확인
+
+- `GET /users` : 빈 리스트 조회 확인
+- `POST /users` : `{ "name": "World", "age": 12 }`
+- `GET /users` : 추가한 유저가 표기되는 리스트 조회 확인
+- `GET /users/1` : 추가한 유저 조회 확인
+
 ### Version, 버전
 
 - Gradle 8.2.1 (Kotlin 1.8.20, Groovy 3.0.17)
@@ -41,3 +50,7 @@ Lombok 을 통해 자동생성되어야할 Getter 가 자바 재컴파일로 인
 - `--force-recreate` : Recreate containers
 - `--build` : Build images before starting containers.
 - `--no-deps` : Don't start linked services.
+
+### 2. Error: Conflict. The container name "/postgres_host" 
+
+기존 컨테이너가 아직 지워지지 않아 발생한 문제라 조금 기다렸다가 다시 `docker-compose up` 수행하면 정상 구동
